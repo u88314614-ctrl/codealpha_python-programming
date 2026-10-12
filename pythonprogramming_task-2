@@ -1,0 +1,60 @@
+import datetime
+
+def chatbot():
+    print("=" * 40)
+    print("       WELCOME TO PYTHON CHATBOT")
+    print("=" * 40)
+    print("Chatbot: Hello! I am your Python chatbot.")
+    print("Chatbot: Type 'help' to see what I can do.")
+    print("Chatbot: Type 'bye' to exit the chat.")
+
+    while True:
+        user_input = input("\nYou: ").lower().strip()
+
+        if user_input == "hello" or user_input == "hi":
+            print("Chatbot: Hi! Nice to meet you.")
+
+        elif user_input == "how are you":
+            print("Chatbot: I'm fine! Thanks for asking.")
+            print("Chatbot: How can I help you today?")
+
+        elif user_input == "what is your name":
+            print("Chatbot: My name is PyBot.")
+
+        elif user_input == "help":
+            print("\nChatbot: Here are some things you can ask me:")
+            print("1. hello")
+            print("2. how are you")
+            print("3. what is your name")
+            print("4. what can you do")
+            print("5. time")
+            print("6. date")
+            print("7. bye")
+
+        elif user_input == "what can you do":
+            print("Chatbot: I can chat with you and tell you")
+            print("the current time and date.")
+
+        elif user_input == "time":
+            current_time = datetime.datetime.now().strftime("%I:%M:%S %p")
+            print("Chatbot: The current time is", current_time)
+
+        elif user_input == "date":
+            current_date = datetime.datetime.now().strftime("%d-%m-%Y")
+            print("Chatbot: Today's date is", current_date)
+
+        elif user_input == "thank you":
+            print("Chatbot: You're welcome!")
+
+        elif user_input == "bye":
+            print("Chatbot: Goodbye! Have a great day.")
+            break
+
+        else:
+            print("Chatbot: Sorry, I don't understand that.")
+            print("Chatbot: Type 'help' to see available commands.")
+
+
+# Start the chatbot
+if __name__ == "__main__":
+    chatbot()
